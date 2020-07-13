@@ -5,9 +5,9 @@ Goal: Create a static copy of the Google homepage -- visually identical, but lin
 
 Challenges:
 ---Overall Layout: Getting navigation bars to split & spread to edges, and making space between header, footer, and central content. 
-    1 First attempt: <div> everything
+    1 First attempt: 'div everything
     
-    2 Second attempt: <header>, <footer>, classes for left/right, overall layout based on blocks with some floating elements and constant margin-tweaking
+    2 Second attempt: 'header', 'footer', classes for left/right, overall layout based on blocks with some floating elements and constant margin-tweaking
     
     3 Third attempt: CSS Grid layout. Rusty on details, referred to https://css-tricks.com/snippets/css/complete-guide-grid/. Excellent solution for layout, worked well. 
 
@@ -23,7 +23,7 @@ Challenges:
     --> Outline is the property. Source: https://www.bitdegree.org/learn/css-form#styling-input-fields
 
 --What to do about the 3x3 grid?
-    -->set 2 options as background image of <div>, one for regular, one for hover.
+    -->set 2 options as background image of 'div', one for regular, one for hover.
 
     
 Concepts and skills learned:
@@ -31,5 +31,5 @@ Concepts and skills learned:
     Styling approaches with CSS: 
         -border smoothing (radius)
         -glow effects on hover
-        -inclusion of images in search bar <div> for customized/softer apperance
+        -inclusion of images in search bar 'div' for customized/softer apperance
         -div background images that change on hover
