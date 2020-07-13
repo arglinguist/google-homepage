@@ -5,11 +5,9 @@ Goal: Create a static copy of the Google homepage -- visually identical, but lin
 
 Challenges:
 ---Overall Layout: Getting navigation bars to split & spread to edges, and making space between header, footer, and central content. 
-    1 First attempt: 'div everything
-    
-    2 Second attempt: 'header', 'footer', classes for left/right, overall layout based on blocks with some floating elements and constant margin-tweaking
-    
-    3 Third attempt: CSS Grid layout. Rusty on details, referred to https://css-tricks.com/snippets/css/complete-guide-grid/. Excellent solution for layout, worked well. 
+    First attempt: 'div everything
+    Second attempt: 'header', 'footer', classes for left/right, overall layout based on blocks with some floating elements and constant margin-tweaking
+    Third attempt: CSS Grid layout. Rusty on details, referred to https://css-tricks.com/snippets/css/complete-guide-grid/. Excellent solution for layout, worked well. 
 
 --Lower navbar sticking -- how to make it stick to lower end of screen? "sticky" not working.
     --> Used calculated height for central area as 100vh - 100px to ensure the footer would be stuck at the bottom (source: https://css-tricks.com/couple-takes-sticky-footer/)
