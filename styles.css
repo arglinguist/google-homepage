@@ -1,79 +1,170 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
-    color: #303030;
-    display: inline-block;
+    color: #333333;
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+    min-width: 980px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-self: stretch;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px calc(100vh - 100px) 40px;
+    grid-template-areas:
+        "lhead rhead"
+        "main main"
+        "lfoot rfoot";
+}
+
+.leftheader{
+    grid-area: lhead;
+    text-align: left;
+    margin-left: 25px;
+}
+.rightheader{
+    grid-area: rhead;
+    text-align: right;
+    margin-right: 25px;
+}
+.leftheader li {
+    padding-right: 15px;
+}
+.rightheader li {
+    padding-left: 15px;
+}
+.leftfooter li{
+    padding-right: 25px;
+}
+.rightfooter li{
+    padding-left: 25px;
+}
+.leftheader, .rightheader{
+    margin-top: 20px;
+    color: #333333;
+    
+}
+.centralcontent{
+    grid-area: main;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 150px; 
+}
+.leftfooter{
+    grid-area: lfoot;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+.rightfooter{
+    grid-area: rfoot;
+    padding-right: 25px;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.leftfooter, .rightfooter{
+    background-color: #EFEFEE;
+    border-top: 1px #DDDDDD solid;
+    font-size: 1.1em;
+    color: #666666;
+}
+
+.leftfooter a:hover, .rightfooter a:hover{
+    color: #666666;
+}
+.centralcontent img {
+    width: 272px;
+}
+
+button{
+    padding: 10px;
+    background-color: #EEEEEE;
+    font-size: 1.0em;
+    color: #666666;
+    border: 1px #EEEEEE solid;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    margin-top: 30px;
+}
+button:hover{
+    background-color: #EFEFEF;
+    font-size: 1.0em;
+    color: #000000;
+    border: 1px #D0D0D0 solid;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 #CCCCCC;
+}
+
+#searchwrapper{
+    position: relative;
+    justify-self: center;
+    justify-content: center;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    width: 490px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+#searchicon{
+    height: 22px;
+    width: 22px;
+    text-align: left;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+#searchbar{
+    width: 88%;
+    border: none;
+    height: 38px; 
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-top: 2px;
+    outline: none;
+}
+
+#searchwrapper:hover{
+    box-shadow: 1px 1px 2px 2px #DDDDDD;
+    border: 1px solid #ffffff;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-flex;
+}
+
+#appsimage{
+    background: url(images/lightmenu.png);
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+#appsimage:hover{
+    background: url(images/darkmenu.png);
+    background-size: contain;
+}
+#userimage {
+    border-radius: 50%;
+    width: 30px;
+    margin-top: -5px;
 }
 a, a:visited{
     text-decoration: none;
-    color: #333333;
+    color:inherit;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #666666;
-}
-#container {
-  /*  width: 100%;*/
-    min-width: 1000px;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-
-}
-ul {
-    width: 100%;
-    margin: 0;
-    padding: 0px 0px 0px 0px;
-    list-style-type: none;
-    display: inline-block;
-}
-li {
-    /*margin: 0px 10px 0px 10px;*/
-    padding: 0px 5px 0px 5px;
-    vertical-align: text-top;
-    display: inline-block;
-    line-height: 30px;
-}
-
-.leftside{
-    float: left;
-    margin: 10px 0px 10px 30px !important;
-    padding: 0px;
-}
-
-.rightside {
-    float: right;
-    margin: 10px 30px 10px 0px !important;
-}
-
-ul img {
-    border-radius: 50%;
-    width: 30px;
-}
-
-#central { 
-    height: 500px;
-}
-#central img {
-    width: 272px;
-}
-#footer {
-    background-color: #EEEEEE;
-    border-top: solid 1px #CFCFCF;
-    font-size: 1em;
-    height: 40px;
-    vertical-align: text-top;
-    /*padding: 5px 10px 5px 0px;
-    margin: 0px 0px 0px 0px;*/
-    width: 100%;
-    /*position: fixed;*/
-}
-
-
-
-#footer a:active{
-    color: rgb(143, 3, 3);
+    color: #444444;
 }
